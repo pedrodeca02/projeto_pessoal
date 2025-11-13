@@ -28,7 +28,7 @@ body {
 }
 
 .header .container {
-  justify-content: space-between;
+ justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -56,6 +56,7 @@ body {
   width: fit-content;
   font-weight: 500;
   justify-content: end;
+  align-content: center;
   
 }
 
@@ -67,7 +68,8 @@ body {
   width: 50px;
   height: 50px;
   justify-content: flex-end;
-  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 50px
 }
 
 
@@ -127,9 +129,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
- 
-
 }
 
 /* .box2 {
@@ -148,11 +147,15 @@ body {
 
 .footer {
   background-color: rgba(228, 94, 24);
-  height: 150px;
+  height: 80px;
   color: #fff;
   display: flex;
   font-size: 15px;
 }
+.titulo_footer {
+  color: #fff;
+}
+
 
 .footer .container {
   justify-content: center;
@@ -163,11 +166,12 @@ body {
   font-size: 12px;
 }
 
+
 /* LOGIN */
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('../assets/imgs/baterialogin_cadastro.png');
   background-size: cover;
 }
 
@@ -179,7 +183,7 @@ body {
 
 .card {
   width: 50%;
-  background-color: #e5e5e5;
+  background-color:  rgba(228, 94, 24);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -209,14 +213,14 @@ body {
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
+  border: 2px solid rgba(254, 249, 233);
   text-align: center;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
+  border: 2px solid rgba(254, 249, 233);
   background-color: rgba(254, 249, 233);
   color: gray;
   height: 36px;
@@ -331,12 +335,11 @@ input {
 /* SIMULADOR */
 
 .simulador {
-  color: rgba(254, 249, 233);
+  color: rgba(228, 94, 24);
 }
 
 .simulador .container {
   flex-direction: column;
-  overflow: scroll;
   height: var(--tamanho-simulador);
 }
 
