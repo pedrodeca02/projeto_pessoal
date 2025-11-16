@@ -1,0 +1,9 @@
+CREATE DATABASE jazztech;
+use jazztech;
+
+CREATE TABLE usuario (
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100),
+email VARCHAR(50) UNIQUE,
+senha VARCHAR(50)
+);

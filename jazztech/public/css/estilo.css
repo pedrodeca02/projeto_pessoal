@@ -122,9 +122,15 @@ body {
  
 }
 .box a {
-   text-decoration: none;
+  text-decoration: none;
   color: rgba(228, 94, 24);
+  font-size: xx-large;
 }
+.box p {
+  color: rgba(228, 94, 24);
+  font-size: xx-large;
+}
+
 
 .social p {
   text-align: center;
@@ -339,14 +345,194 @@ input {
 }
 
 /* MUSEU */
-
-.museu {
+.museu{
   color: rgba(228, 94, 24);
+  padding-top: 20px;
+}
+
+.museu h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+
+}
+
+.museu h2 {
+  margin-top: 25px;
+  font-size: 28px;
 }
 
 .museu .container {
   flex-direction: column;
-  height: var(--tamanho-museu);
+  margin-top: 10px;
+  margin-bottom: 35px;
+
+}
+
+.jaco-container1 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.jacoimg1 {
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco1 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.jacocrianca {
+  width: 220px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco2 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container3 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cochran {
+  width: 220px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco3 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container4 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.jacopastoriusalbum {
+  width: 1400px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco4 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container5 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.weatherreport {
+  width: 250px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco5 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container6 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.bassofdoom {
+  width: 250px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco6 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
+}
+.jaco-container7 {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 25px;
+  background-color: rgba(254, 249, 233);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.jacomorte {
+  width: 250px;
+  border-radius: 15px;
+  display: block;
+  margin: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.texto-jaco7 h3 {
+  font-size: 22px;
+  color: rgba(228, 94, 24);
+  margin-bottom: 10px;
 }
 
 /* ALERTA */
