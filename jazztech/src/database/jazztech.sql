@@ -22,3 +22,4 @@ fkQuiz INT,
     FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
 
+ INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
