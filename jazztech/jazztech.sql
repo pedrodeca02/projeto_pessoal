@@ -22,3 +22,5 @@ fkQuiz INT,
     FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
 
+select * from usuario
+
