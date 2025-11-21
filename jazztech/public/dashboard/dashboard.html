@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JazzTech | Dashboards</title>
 
-    
+
     <link rel="stylesheet" href="./../css/dashboards.css">
     <!-- <link rel="stylesheet" href="./../css/estilo.css" /> -->
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -56,17 +57,10 @@
         </div>
 
         <div class="dash">
-            <!-- <div id="alerta">
+            <div class="grafico1">
+                <canvas id="myChart1"></canvas>
             </div>
-
-            <div class="btns-dash" id="btnAquario">
-                O gráfico é chamado de acordo com o id (fk_aquario) do banco  
-            </div>
-            <div id="graficos">
-                chart.js aqui  
-            </div>
-        </div> -->
-    </div> 
+        </div>
 
 
 </body>
@@ -74,6 +68,26 @@
 </html>
 
 <script>
+      const ctx = document.getElementById('myChart1');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;
