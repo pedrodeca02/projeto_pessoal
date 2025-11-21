@@ -148,12 +148,12 @@ body {
 .footer {
   background-color: rgba(228, 94, 24);
   height: 80px;
-  color: #fff;
+color: rgba(254, 249, 233);
   display: flex;
   font-size: 15px;
 }
 .titulo_footer {
-  color: #fff;
+color: rgba(254, 249, 233);
 }
 
 

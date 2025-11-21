@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+    <!-- <div class="janela">
+
+        <div class="header-left dash-header">
+
+            <h1>JazzTech</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+
+            <div class="btn-nav">
+                <h3>Quiz</h3>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Dashboard</h3>
+                </a>
+            </div>
+
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+
+        </div>
+
+        <div class="dash">
+        
+        </div>
+
+    </div> -->
 
 <body onload="onloadEsconder()">
     <div id="pontuacaoEJogo">
@@ -74,34 +105,70 @@
 </html>
 <script>
     const listaDeQuestoes = [
-
         {
-            pergunta: "Qual mês tem 30 dias?",
-            alternativaA: "Janeiro",
-            alternativaB: "Dezembro",
-            alternativaC: "Junho",
-            alternativaD: "Agosto",
+            pergunta: "Jaco Pastorius ficou mundialmente conhecido por popularizar qual tipo específico de baixo?",
+            alternativaA: "Baixo acústico",
+            alternativaB: "Baixo fretless",
+            alternativaC: "Baixo de seis cordas",
+            alternativaD: "Baixo barítono",
+            alternativaCorreta: "alternativaB"
+        },
+        {
+            pergunta: "Em qual banda de jazz fusion Jaco ganhou grande destaque internacional na década de 1970?",
+            alternativaA: "Weather Report",
+            alternativaB: "Return to Forever",
+            alternativaC: "Yellowjackets",
+            alternativaD: "Mahavishnu Orchestra",
+            alternativaCorreta: "alternativaA"
+        },
+        {
+            pergunta: "Qual álbum solo de Jaco é frequentemente considerado revolucionário para o baixo elétrico?",
+            alternativaA: "Heavy Weather",
+            alternativaB: "Birds of Fire",
+            alternativaC: "Jaco Pastorius (1976)",
+            alternativaD: "Black Market",
             alternativaCorreta: "alternativaC"
         },
-
         {
-            pergunta: "Quantas horas tem em um dia?",
-            alternativaA: "30 horas",
-            alternativaB: "38 horas",
-            alternativaC: "48 horas",
-            alternativaD: "24 horas",
-            alternativaCorreta: "alternativaD"
+            pergunta: "Além de baixista, Jaco também era conhecido por qual outra função musical?",
+            alternativaA: "Luthier",
+            alternativaB: "Regente",
+            alternativaC: "Produtor e arranjador",
+            alternativaD: "Criador de efeitos digitais",
+            alternativaCorreta: "alternativaC"
         },
-
         {
-            pergunta: "Qual destes números é ímpar?",
-            alternativaA: "Dez",
-            alternativaB: "Doze",
-            alternativaC: "Oito",
-            alternativaD: "Onze",
-            alternativaCorreta: "alternativaD"
+            pergunta: "Uma das marcas registradas de Jaco era seu uso criativo de qual recurso musical?",
+            alternativaA: "Harmônicos",
+            alternativaB: "Glissandos infinitos",
+            alternativaC: "Distorção pesada",
+            alternativaD: "Acordes com palheta",
+            alternativaCorreta: "alternativaA"
+        },
+        {
+            pergunta: "Qual é uma das composições mais famosas de Jaco?",
+            alternativaA: "Spain",
+            alternativaB: "Portrait of Tracy",
+            alternativaC: "Giant Steps",
+            alternativaD: "So What",
+            alternativaCorreta: "alternativaB"
+        },
+        {
+            pergunta: "De qual país Jaco Pastorius era natural?",
+            alternativaA: "Brasil",
+            alternativaB: "Inglaterra",
+            alternativaC: "Estados Unidos",
+            alternativaD: "Canadá",
+            alternativaCorreta: "alternativaC"
+        },
+        {
+            pergunta: "Qual característica ajudava a definir o som do 'Bass of Doom'?",
+            alternativaA: "Captadores ativos",
+            alternativaB: "Corpo de grafite",
+            alternativaC: "Ausência de trastes",
+            alternativaD: "Cordas de nylon",
+            alternativaCorreta: "alternativaC"
         }
-
     ]
 
     // variáveis globais    
@@ -271,14 +338,14 @@
             classComCoresParaMensagemFinal = "text-success-with-bg"
         }
 
-        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos)*100) + "% das questões."
+        textoParaMensagemFinal += "<br> Você acertou " + Math.round((porcentagemFinalDeAcertos) * 100) + "% das questões."
 
 
         document.getElementById('msgFinal').innerHTML = textoParaMensagemFinal
-        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal) 
+        document.getElementById('msgFinal').classList.add(classComCoresParaMensagemFinal)
         document.getElementById('spanPontuacaoFinal').innerHTML = pontuacaoFinal
 
-        document.getElementById('jogo').classList.add("text-new-gray") 
+        document.getElementById('jogo').classList.add("text-new-gray")
 
         btnProx.disabled = true
         btnSubmeter.disabled = true
