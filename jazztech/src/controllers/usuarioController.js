@@ -17,6 +17,11 @@ function autenticar(req, res) {
                     console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
                     if (resultadoAutenticar.length == 1) {
+                        res.json({
+                            idUsuario: resultadoAutenticar[0].idUsuario,
+                            email:resultadoAutenticar[0].email,
+                            nome: resultadoAutenticar[0].nome
+                        })
                         console.log(resultadoAutenticar);
                         res.status(200).json({mensagem: 'Login validado', resultadoAutenticar})
                     } else if (resultadoAutenticar.length == 0) {

@@ -44,8 +44,8 @@ body {
 
 .dash-right .avisos .div-form textarea {
   width: 95%;
-  border: 3px solid #e6005a;
-  background-color: white;
+  border: 3px solid rgba(228, 94, 24);
+  background-color: rgba(254, 249, 233);
   border-radius: 5px;
 }
 
@@ -57,8 +57,8 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
+  color: rgba(254, 249, 233);
+  background-color: rgba(228, 94, 24);
   width: 120px;
 }
 
@@ -70,8 +70,8 @@ body {
   font-weight: 600;
   font-size: 14px;
   padding: 5px 8px;
-  color: white;
-  background-color: #e6005a;
+  color: rgba(254, 249, 233);
+  background-color: rgba(228, 94, 24);
   width: 80px;
 }
 
@@ -82,7 +82,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid rgba(228, 94, 24);
   padding: 20px;
 }
 
@@ -140,7 +140,7 @@ body {
 }
 
 .area-parametros-alerta .titulo-legenda {
-  color: white;
+  color: rgba(254, 249, 233);
   font-weight: 600;
   width: fit-content;
   margin: 10px 20px;
@@ -197,7 +197,7 @@ body {
   height: 450px;
   width: 100%;
   align-items: center;
-  color: white;
+  color: rgba(254, 249, 233);
 }
 
 .card-aquario {
@@ -290,21 +290,21 @@ body {
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
+  color: rgba(228, 94, 24);
+  background-color: rgba(254, 249, 233);
   margin: 5px;
   border-radius: 3px;
   cursor: pointer
 }
 
 .btn-pink {
-  color: white;
-  background-color: #e6005a;
+  color: rgba(254, 249, 233);
+  background-color: rgba(228, 94, 24);
 }
 
 .btn-white {
-  color: #e6005a;
-  background-color: white;
+  color: rgba(228, 94, 24);
+  background-color: rgba(254, 249, 233);
 
 }
 
@@ -338,7 +338,7 @@ canvas {
 
 .header-left a {
   text-decoration: none;
-  color: white;
+  color: rgba(254, 249, 233);
 }
 
 .header-left {
@@ -352,8 +352,8 @@ canvas {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid rgba(228, 94, 24);
+  background-color:rgba(254, 249, 233);
 }
 
 .dash-right {
@@ -369,7 +369,7 @@ canvas {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color:rgba(228, 94, 24);
 }
 
 .hello {
@@ -379,7 +379,7 @@ canvas {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: rgba(228, 94, 24);
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -390,8 +390,9 @@ canvas {
 
 .btn-nav {
   width: 40%;
-  color: white;
-  background-color: #e6005a;
+  color: rgba(228, 94, 24);
+  background-color: rgba(254, 249, 233);
+  border: 3px solid rgba(228, 94, 24);
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -399,15 +400,15 @@ canvas {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  background-color: rgba(228, 94, 24);
+  border: 3px solid rgba(254, 249, 233);
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: rgba(254, 249, 233);
   padding: 0;
   margin: 0;
 }
@@ -422,8 +423,8 @@ canvas {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
-  color: white;
+  background-color: rgba(228, 94, 24);
+  color: rgba(254, 249, 233);
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;
@@ -434,8 +435,8 @@ canvas {
 /* DATA VIZ */
 
 :root {
-    --primary-brand-color: #ED145B;
-    --secondary-brand-color: #0762C8;
+    --primary-brand-color: rgba(228, 94, 24);
+    --secondary-brand-color:  rgba(254, 249, 233);
     --success: #198754;
     --success-dark: #095c36;
     --success-light: #9dd3ba;

@@ -28,7 +28,7 @@ body {
 }
 
 .header .container {
- justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
@@ -57,12 +57,13 @@ body {
   font-weight: 500;
   justify-content: end;
   align-content: center;
-  
+
 }
 
 .header h1 {
   margin: 0;
 }
+
 .logo {
   display: flex;
   width: 50px;
@@ -114,18 +115,20 @@ body {
   width: 170px;
 }
 
-.social .container .boxes  {
+.social .container .boxes {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 30px 0;
- 
+
 }
+
 .box a {
   text-decoration: none;
   color: rgba(228, 94, 24);
   font-size: xx-large;
 }
+
 .box p {
   color: rgba(228, 94, 24);
   font-size: xx-large;
@@ -148,12 +151,13 @@ body {
 .footer {
   background-color: rgba(228, 94, 24);
   height: 80px;
-color: rgba(254, 249, 233);
+  color: rgba(254, 249, 233);
   display: flex;
   font-size: 15px;
 }
+
 .titulo_footer {
-color: rgba(254, 249, 233);
+  color: rgba(254, 249, 233);
 }
 
 
@@ -183,7 +187,7 @@ color: rgba(254, 249, 233);
 
 .card {
   width: 50%;
-  background-color:  rgba(228, 94, 24);
+  background-color: rgba(228, 94, 24);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -333,7 +337,7 @@ input {
 }
 
 /* MUSEU */
-.museu{
+.museu {
   color: rgba(228, 94, 24);
   padding-top: 20px;
 }
@@ -378,6 +382,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container2 {
   display: flex;
   align-items: flex-start;
@@ -402,6 +407,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container3 {
   display: flex;
   align-items: flex-start;
@@ -426,6 +432,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container4 {
   display: flex;
   align-items: flex-start;
@@ -450,6 +457,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container5 {
   display: flex;
   align-items: flex-start;
@@ -474,6 +482,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container6 {
   display: flex;
   align-items: flex-start;
@@ -498,6 +507,7 @@ input {
   color: rgba(228, 94, 24);
   margin-bottom: 10px;
 }
+
 .jaco-container7 {
   display: flex;
   align-items: flex-start;
