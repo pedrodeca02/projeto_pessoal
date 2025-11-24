@@ -13,14 +13,13 @@
     <!-- <link rel="stylesheet" href="./../css/estilo.css" /> -->
 
     <script src="../js/sessao.js"></script>
-    <script src="../js/alerta.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao()">
+<body>
 
     <div class="janela">
 
@@ -104,14 +103,14 @@
 
                     <div id="botoes" class="botoes">
                         <div class="submeter">
-                            <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>                            
+                            <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
                         </div>
                         <div class="proximo">
                             <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button>
                         </div>
                         <div class="tentarNovamente">
-                        <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar
-                            novamente</button>
+                            <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar
+                                novamente</button>
                         </div>
                     </div>
 
@@ -125,6 +124,7 @@
 </body>
 
 <script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     const listaDeQuestoes = [
         {
             pergunta: "Jaco Pastorius ficou mundialmente conhecido por popularizar qual tipo específico de baixo?",
@@ -199,7 +199,8 @@
     let certas = 0
     let erradas = 0
     let quantidadeDeQuestoes = listaDeQuestoes.length
-    // let isUltima = numeroDaQuestaoAtual == quantidadeDeQuestoes-1 ? true : false
+    let idQuiz = 1;
+    let idUsuario = 1;
 
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
@@ -373,8 +374,34 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
-    }
+        // fetch
+        fetch("/quiz/cadastrarTentativa", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                // "id_usuario": sessionStorage.ID_USUARIO
+            },
+            body: JSON.stringify({
+                idUsuario: idUsuario,
+                idQuiz: idQuiz,
+                pontuacao: pontuacaoFinal,
+                acertos: certas,
+                erros: erradas
+            })
+        })
+            .then(function (resposta) {
+                console.log("resposta:", resposta);
 
+                if (resposta.ok) {
+                    console.log("Tentativa registrada no banco!");
+                } else {
+                    throw "Erro ao cadastrar tentativa!";
+                }
+            })
+            .catch(function (erro) {
+                console.log("#ERRO:", erro);
+            });
+    }
 
 </script>
 

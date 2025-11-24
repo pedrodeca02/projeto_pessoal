@@ -20,7 +20,7 @@ body {
   width: 80%;
   position: absolute;
   top: 0;
-  left: 270px;
+  margin-left: 280px;
   right: 0;
   background-color: rgba(254, 249, 233);
   height: 100vh;
@@ -179,14 +179,14 @@ canvas {
 .kpis {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  justify-content: space-evenly;
   margin-top: 40px;
 }
 
 .kpi {
   background-color: var(--primary-brand-color);
   border: 1px solid var(--secondary-brand-color);
-  padding: 20px 30px;
+  padding: 10px 20px;
   border-radius: 12px;
   width: 200px;
   text-align: center;
@@ -239,7 +239,7 @@ button {
   background-color: var(--primary-brand-color);
   color: var(--secondary-brand-color);
   border-color: var(--primary-brand-color);
-  padding: 18px 36px;
+  padding: 18px 16px;
   font-size: 22px;
   border-radius: 8px;
 }
@@ -247,7 +247,7 @@ button {
 .botoes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 8px 16px;
   font-size: 12px;
   border-radius: 8px;

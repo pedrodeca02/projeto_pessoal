@@ -14,12 +14,27 @@ nome VARCHAR(40),
 descricao VARCHAR(100)
 );
 
-CREATE TABLE pontuacao (
+CREATE TABLE tentativa (
+idTentativa INT PRIMARY KEY AUTO_INCREMENT,
+acertos INT,
+erros INT,
+tentativa int,
+pontuacao INT,
 fkUsuario INT,
 fkQuiz INT,
-	CONSTRAINT pkComposta PRIMARY KEY (fkUsuario, fkQuiz),
 	FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
+-- alter table tentativa add column acertos INT;
+-- alter table tentativa add column erros INT;
+ INSERT INTO usuario (nome, email, senha) VALUES ('matheus', 'matheus@teste.com', '1234');
+ 
+ INSERT INTO quiz (nome, descricao) VALUES ('quiz de jazz', 'quiz de jazz pedrao');
+ 
+ INSERT INTO tentativa (fkUsuario, fkQuiz, pontuacao, acertos, erros) VALUES ('${idUsuario}', '${idQuiz}', '${pontuacao}', '${acertos}', '${erros}');
 
- INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+select * from usuario;
+select fkUsuario, fkQuiz, pontuacao, acertos, erros from tentativa;
+select * from quiz;
+
+select * from tentativa;
