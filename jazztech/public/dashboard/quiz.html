@@ -200,7 +200,7 @@
     let erradas = 0
     let quantidadeDeQuestoes = listaDeQuestoes.length
     let idQuiz = 1;
-    let idUsuario = 1;
+    // let idUsuario = 1;
 
     function onloadEsconder() {
         document.getElementById('pontuacao').style.display = "none"
@@ -301,8 +301,8 @@
 
         options.forEach((option) => {
             if (option.value === respostaQuestaoAtual) {
-                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
                 alternativaCorreta = option.labels[0].id
+                console.log("alternativaCorreta está no componente: " + alternativaCorreta)
             }
         })
 
@@ -343,6 +343,8 @@
     }
 
     function finalizarJogo() {
+        let idUsuario = sessionStorage.ID_USUARIO;
+
         let textoParaMensagemFinal = null
         let classComCoresParaMensagemFinal = null
         const porcentagemFinalDeAcertos = pontuacaoFinal / quantidadeDeQuestoes
@@ -375,14 +377,12 @@
         btnTentarNovamente.disabled = false
 
         // fetch
-        fetch("/quiz/cadastrarTentativa", {
+        fetch(`/quiz/cadastrarTentativa/${idUsuario}`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                // "id_usuario": sessionStorage.ID_USUARIO
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                idUsuario: idUsuario,
                 idQuiz: idQuiz,
                 pontuacao: pontuacaoFinal,
                 acertos: certas,

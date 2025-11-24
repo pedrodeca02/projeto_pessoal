@@ -133,27 +133,27 @@
       finalizarAguardar();
       return false;
     }
-    else if (!senhaVar.includes(vt_icon)) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Sua senha deve conter ao menos um caractere especial)";
-      finalizarAguardar();
-      return false;
-    }
-    else if (!senhaVar.includes(vt_numeros)) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Sua senha deve conter ao menos um númerol)";
-      finalizarAguardar();
-      return false;
-    }
-    else if (!senhaVar.length < 6) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Sua senha deve conter ao menos um númerol)";
-      finalizarAguardar();
-      return false;
-    }
+    // else if (!senhaVar.includes(vt_icon)) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Sua senha deve conter ao menos um caractere especial)";
+    //   finalizarAguardar();
+    //   return false;
+    // }
+    // else if (!senhaVar.includes(vt_numeros)) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Sua senha deve conter ao menos um númerol)";
+    //   finalizarAguardar();
+    //   return false;
+    // }
+    // else if (!senhaVar.length < 6) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Sua senha deve conter ao menos um númerol)";
+    //   finalizarAguardar();
+    //   return false;
+    // }
     else {
       setInterval(sumirMensagem, 5000);
     }

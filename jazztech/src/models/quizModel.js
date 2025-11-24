@@ -20,9 +20,18 @@ function cadastrarTentativa(idUsuario, idQuiz, pontuacao, acertos, erros) {
     console.log("Executando SQL:\n" + instrucao);
     return database.executar(instrucao);
 }
+function buscarPontuacao(idUsuario) {
 
+    var instrucao = `
+       SELECT idTentativa, pontuacao FROM tentativa WHERE fkUsuario = ${idUsuario};
+    `;
+
+    console.log("Executando SQL:\n" + instrucao);
+    return database.executar(instrucao);
+}
 
 module.exports = {
     cadastrarTentativa,
-    listarTentativas
+    listarTentativas,
+    buscarPontuacao
 };

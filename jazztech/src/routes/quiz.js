@@ -3,7 +3,7 @@ var router = express.Router();
 
 var quizController = require("../controllers/quizController");
 
-router.post("/cadastrarTentativa", function (req, res) {
+router.post("/cadastrarTentativa/:idUsuario", function (req, res) {
     quizController.cadastrarTentativa(req, res);
 });
 
@@ -11,4 +11,7 @@ router.get("/listarTentativas/:idUsuario", function (req, res) {
     quizController.listarTentativas(req, res);
 });
 
+router.get("/buscarPontuacao/:idUsuario", function (req, res) {
+    quizController.buscarPontuacao(req, res);
+});
 module.exports = router;

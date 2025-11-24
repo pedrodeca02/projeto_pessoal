@@ -1,7 +1,7 @@
-var quizModel = require("../models/quizModel");
+var quizModel = require("../models/quizModel")
 
 function cadastrarTentativa(req, res) {
-    var idUsuario = req.body.idUsuario;
+    var idUsuario = req.params.idUsuario;
     var idQuiz = req.body.idQuiz;
     var pontuacao = req.body.pontuacao;
     var acertos = req.body.acertos;
@@ -14,8 +14,8 @@ function cadastrarTentativa(req, res) {
             res.status(500).json({
                 erro: erro,
                 sql: erro.sqlMessage
-            });
-        });
+            })
+        })
 
 }
 
@@ -24,10 +24,28 @@ function listarTentativas(req, res) {
 
     quizModel.listarTentativas(idUsuario)
         .then(resultado => res.status(200).json(resultado))
-        .catch(erro => res.status(500).json(erro.sqlMessage));
+        .catch(erro => res.status(500).json(erro.sqlMessage))
 }
 
-module.exports = {
-    cadastrarTentativa,
-    listarTentativas
-};
+
+function buscarPontuacao(req, res) {
+    var idUsuario = req.params.idUsuario;
+    
+    quizModel.buscarPontuacao(idUsuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar as ultimas medidas.", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+    module.exports = {
+        cadastrarTentativa,
+        listarTentativas,
+        buscarPontuacao
+    }
