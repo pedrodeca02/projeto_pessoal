@@ -29,7 +29,9 @@ function listarTentativas(req, res) {
 
 
 function buscarPontuacao(req, res) {
-    var idUsuario = req.params.idUsuario;
+    var idUsuario = req.body.idServer;
+
+    console.log(idUsuario + 'id Usuário')
     
     quizModel.buscarPontuacao(idUsuario).then(function (resultado) {
         if (resultado.length > 0) {

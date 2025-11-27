@@ -85,9 +85,6 @@
 </html>
 
 <script>
-
-var vt_arroba = ["@"]
-var vt_icon = ["@","#","$"]
     function entrar() {
         aguardar();
 
@@ -96,7 +93,7 @@ var vt_icon = ["@","#","$"]
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "(Existem campos em branco)";
             finalizarAguardar();
             return false;
         }

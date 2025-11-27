@@ -11,7 +11,8 @@ router.get("/listarTentativas/:idUsuario", function (req, res) {
     quizController.listarTentativas(req, res);
 });
 
-router.get("/buscarPontuacao/:idUsuario", function (req, res) {
+router.post("/buscarPontuacao", function (req, res) {
     quizController.buscarPontuacao(req, res);
 });
+
 module.exports = router;

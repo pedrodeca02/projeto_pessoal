@@ -77,31 +77,38 @@
 </html>
 
 <script>
-    window.onload = obterDadosGrafico();
     let idUsuario = sessionStorage.ID_USUARIO;
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
+    window.onload = obterDadosGrafico(), buscarDadosPontuacao();
+
+
     function obterDadosGrafico() {
+        console.log(idUsuario)
         buscarDadosPontuacao();
         
     }
-    function buscarDadosPontuacao(idUsuario) {
-        fetch(`/quiz/buscarPontuacao/${idUsuario}`)
-            .then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (resposta) {
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                        resposta.reverse();
-                        
-                        plotarGrafico(resposta);
-                        
-                    });
+    function buscarDadosPontuacao() {
+        fetch(`/quiz/buscarPontuacao`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idServer: idUsuario
+            })
+        })
+            .then(function (resposta) {
+                console.log("resposta:", resposta);
+
+                if (resposta.ok) {
+                    console.log("Tentativa registrada no banco!");
                 } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
+                    throw "Erro ao cadastrar tentativa!";
                 }
             })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            .catch(function (erro) {
+                console.log("#ERRO:", erro);
             });
     }
         function plotarGrafico(resposta) {

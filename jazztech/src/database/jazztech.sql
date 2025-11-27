@@ -7,7 +7,6 @@ nome VARCHAR(100),
 email VARCHAR(50) UNIQUE,
 senha VARCHAR(50)
 );
-
 select * from usuario;
 
 CREATE TABLE quiz (
@@ -20,23 +19,21 @@ CREATE TABLE tentativa (
 idTentativa INT PRIMARY KEY AUTO_INCREMENT,
 acertos INT,
 erros INT,
-tentativa int,
 pontuacao INT,
 fkUsuario INT,
 fkQuiz INT,
 	FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
--- alter table tentativa add column acertos INT;
+-- alter table tentativa drop column tentativa;
 -- alter table tentativa add column erros INT;
- INSERT INTO usuario (nome, email, senha) VALUES ('matheus', 'matheus@teste.com', '1234');
- 
+ INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+
  INSERT INTO quiz (nome, descricao) VALUES ('quiz de jazz', 'quiz de jazz pedrao');
  
  INSERT INTO tentativa (fkUsuario, fkQuiz, pontuacao, acertos, erros) VALUES ('${idUsuario}', '${idQuiz}', '${pontuacao}', '${acertos}', '${erros}');
 
 select * from usuario;
-select fkUsuario, fkQuiz, pontuacao, acertos, erros from tentativa;
 select * from quiz;
-
 select * from tentativa;
+SELECT idTentativa, pontuacao FROM tentativa WHERE fkUsuario = 4;
