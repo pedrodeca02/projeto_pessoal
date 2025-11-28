@@ -25,15 +25,13 @@ fkQuiz INT,
 	FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (fkQuiz) REFERENCES quiz(idQuiz)
 );
--- alter table tentativa drop column tentativa;
--- alter table tentativa add column erros INT;
+
  INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
 
  INSERT INTO quiz (nome, descricao) VALUES ('quiz de jazz', 'quiz de jazz pedrao');
  
  INSERT INTO tentativa (fkUsuario, fkQuiz, pontuacao, acertos, erros) VALUES ('${idUsuario}', '${idQuiz}', '${pontuacao}', '${acertos}', '${erros}');
-
+ 
 select * from usuario;
 select * from quiz;
 select * from tentativa;
-SELECT idTentativa, pontuacao FROM tentativa WHERE fkUsuario = 4;
