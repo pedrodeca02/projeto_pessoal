@@ -23,7 +23,7 @@ function cadastrarTentativa(idUsuario, idQuiz, pontuacao, acertos, erros) {
 function buscarPontuacao(idUsuario) {
 
     var instrucao = `
-       SELECT idTentativa, pontuacao FROM tentativa WHERE fkUsuario = ${idUsuario};
+        SELECT idTentativa, pontuacao, acertos FROM tentativa WHERE fkUsuario = ${idUsuario};
     `;
 
     console.log("Executando SQL:\n" + instrucao);
