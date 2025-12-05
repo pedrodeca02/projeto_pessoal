@@ -13,8 +13,8 @@ function listarTentativas(idUsuario) {
 function cadastrarTentativa(idUsuario, idQuiz, pontuacao, acertos, erros) {
 
     var instrucao = `
-        INSERT INTO tentativa (fkUsuario, fkQuiz, pontuacao, acertos, erros) VALUES 
-        (${idUsuario}, ${idQuiz}, ${pontuacao}, ${acertos}, ${erros});
+        INSERT INTO tentativa (fkUsuario, fkQuiz, tentativa, pontuacao, acertos, erros) VALUES 
+        (${idUsuario}, ${idQuiz}, NOW(), ${pontuacao}, ${acertos}, ${erros});
     `;
 
     console.log("Executando SQL:\n" + instrucao);
@@ -23,7 +23,7 @@ function cadastrarTentativa(idUsuario, idQuiz, pontuacao, acertos, erros) {
 function buscarPontuacao(idUsuario) {
 
     var instrucao = `
-        SELECT idTentativa, pontuacao, acertos FROM tentativa WHERE fkUsuario = ${idUsuario};
+        SELECT idTentativa, pontuacao, acertos, DATE_FORMAT(tentativa, '%D/%M/%Y %H:%i:%S') FROM tentativa WHERE fkUsuario = ${idUsuario};
     `;
 
     console.log("Executando SQL:\n" + instrucao);

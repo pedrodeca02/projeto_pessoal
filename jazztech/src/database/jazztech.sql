@@ -19,6 +19,7 @@ CREATE TABLE tentativa (
 idTentativa INT PRIMARY KEY AUTO_INCREMENT,
 acertos INT,
 erros INT,
+tentativa DATETIME,
 pontuacao INT,
 fkUsuario INT,
 fkQuiz INT,
@@ -30,8 +31,8 @@ fkQuiz INT,
 
  INSERT INTO quiz (nome, descricao) VALUES ('quiz de jazz', 'quiz de jazz pedrao');
  
- INSERT INTO tentativa (fkUsuario, fkQuiz, pontuacao, acertos, erros) VALUES ('${idUsuario}', '${idQuiz}', '${pontuacao}', '${acertos}', '${erros}');
+ INSERT INTO tentativa (fkUsuario, fkQuiz, tentativa, pontuacao, acertos, erros) VALUES ('${idUsuario}', '${idQuiz}', '${tentativa}', '${pontuacao}', '${acertos}', '${erros}');
  
-select * from usuario;
+select * from usuario;	
 select * from quiz;
 select * from tentativa;
